@@ -1,0 +1,82 @@
+/* Custom preloader created by stoxmod*/
+
+body{
+    margin: 0;
+}
+  .preloaderImage{
+    position: absolute;
+    left:50%;
+    top:48%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+
+  .preLoaderContainer{
+    position:absolute;
+    background-color:#ededed;
+    width:100%;
+    height:100vh;
+    z-index:10000;
+  }
+
+  .preLoaderAnimation {
+    position: absolute;
+    left:50%;
+    top:51%;
+    width: 64px;
+    height: 64px;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.preLoaderAnimation div {
+    position: absolute;
+    top: 65%;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: rgba(186, 188, 190, 0.932);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+
+.preLoaderAnimation div:nth-child(1) {
+    left: 6px;
+    animation: preLoaderAnimationEllipsis1 0.6s infinite;
+}
+.preLoaderAnimation div:nth-child(2) {
+    left: 6px;
+    animation: preLoaderAnimationEllipsis2 0.6s infinite;
+}
+.preLoaderAnimation div:nth-child(3) {
+    left: 26px;
+    animation: preLoaderAnimationEllipsis2 0.6s infinite;
+}
+.preLoaderAnimation div:nth-child(4) {
+    left: 45px;
+    animation: preLoaderAnimationEllipsis3 0.6s infinite;
+}
+
+@keyframes preLoaderAnimationEllipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes preLoaderAnimationEllipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes preLoaderAnimationEllipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
+    }
+  }
