@@ -1,0 +1,205 @@
+/*--------------------------------------Preloader v5 By stoXmod-----------------------------------*/
+
+body{
+  overflow-y: hidden;
+}
+
+.section-loader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999999; 
+  }
+
+  .section-loader .loading {
+  position: absolute;
+  left:49%;
+  top:72%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  }
+
+  .section-loader .msg {
+  color: #757575;
+  font: 15px/15px Arial, sans-serif;
+  letter-spacing: .2px;
+  text-align: center
+  }
+
+  .section-loader #nlpt {
+  animation: a-s .5s 2.5s 1 forwards;
+  background-color: #f1f1f1;
+  height: 4px;
+  margin: 56px auto 20px;
+  border-radius: 30px;
+  opacity: 0;
+  overflow: hidden;
+  position: relative;
+  width: 300px
+  }
+
+  .section-loader #nlpt::before {
+  animation: a-lb 20s 3s linear forwards;
+  background-color: #c81111;
+  content: '';
+  display: block;
+  border-radius: 30px;
+  height: 100%;
+  position: absolute;
+  transform: translateX(-300px);
+  width: 100%
+  }
+
+  @keyframes a-lb {
+  0% {
+      transform: translateX(-300px)
+  }
+  5% {
+      transform: translateX(-240px)
+  }
+  15% {
+      transform: translateX(-30px)
+  }
+  25% {
+      transform: translateX(-30px)
+  }
+  30% {
+      transform: translateX(-20px)
+  }
+  45% {
+      transform: translateX(-20px)
+  }
+  50% {
+      transform: translateX(-15px)
+  }
+  65% {
+      transform: translateX(-15px)
+  }
+  70% {
+      transform: translateX(-10px)
+  }
+  95% {
+      transform: translateX(-10px)
+  }
+  100% {
+      transform: translateX(-5px)
+  }
+  }
+
+  @keyframes a-s {
+  100% {
+      opacity: 1
+  }
+  }
+
+  @keyframes a-h {
+  100% {
+      opacity: 0
+  }
+  }
+
+  @keyframes a-nt {
+  100% {
+      transform: none
+  }
+  }
+
+  @keyframes a-e {
+  43% {
+      animation-timing-function: cubic-bezier(.8, 0, .2, 1);
+      transform: scale(.75)
+  }
+  60% {
+      animation-timing-function: cubic-bezier(.8, 0, 1, 1);
+      transform: translateY(-16px)
+  }
+  77% {
+      animation-timing-function: cubic-bezier(.16, 0, .2, 1);
+      transform: none
+  }
+  89% {
+      animation-timing-function: cubic-bezier(.8, 0, 1, 1);
+      transform: translateY(-5px)
+  }
+  100% {
+      transform: none
+  }
+  }
+
+  @keyframes a-ef {
+  24% {
+      animation-timing-function: cubic-bezier(.8, 0, .6, 1);
+      transform: scaleY(.42)
+  }
+  52% {
+      animation-timing-function: cubic-bezier(.63, 0, .2, 1);
+      transform: scaleY(.98)
+  }
+  83% {
+      animation-timing-function: cubic-bezier(.8, 0, .84, 1);
+      transform: scaleY(.96)
+  }
+  100% {
+      transform: none
+  }
+  }
+
+  @keyframes a-efs {
+  24% {
+      animation-timing-function: cubic-bezier(.8, 0, .6, 1);
+      opacity: .3
+  }
+  52% {
+      animation-timing-function: cubic-bezier(.63, 0, .2, 1);
+      opacity: .03
+  }
+  83% {
+      animation-timing-function: cubic-bezier(.8, 0, .84, 1);
+      opacity: .05
+  }
+  100% {
+      opacity: 0
+  }
+  }
+
+  @keyframes a-es {
+  24% {
+      animation-timing-function: cubic-bezier(.8, 0, .6, 1);
+      transform: rotate(-25deg)
+  }
+  52% {
+      animation-timing-function: cubic-bezier(.63, 0, .2, 1);
+      transform: rotate(-42.5deg)
+  }
+  83% {
+      animation-timing-function: cubic-bezier(.8, 0, .84, 1);
+      transform: rotate(-42deg)
+  }
+  100% {
+      transform: rotate(-43deg)
+  }
+  }
+
+  .invfr {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border: 0
+  }
+
+  .msgb {
+  position: absolute;
+  right: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #000;
+  padding: 10px
+  }
